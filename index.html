@@ -3,39 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Snake</title>
-    <style>
-        body {
-            height: 100vh;
-            width: 100vw;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 0;
-            background-color: black;
-        }
-
-        #game-board {
-            background-color: #ccc;
-            width: 80vmin;
-            height: 80vmin;
-            display: grid;
-            grid-template-rows: repeat(21, 1fr);
-            grid-template-columns: repeat(21, 1fr);
-        }
-
-        .snake {
-            background-color: hsl(200, 100%, 50%);
-            border: .25vmin solid black;
-        }
-
-        .food {
-            background-color: hsl(50, 100%, 50%);
-            border: .25vmin solid black;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <script src="game.js" defer type="module"></script>
 </head>
 <body>
+
+    <div id="gamer-score">
+        Score : <span id="score"></span>
+    </div>
     <div id="game-board"></div>
 </body>
 </html>

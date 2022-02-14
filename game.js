@@ -1,4 +1,4 @@
-import {update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection} from "./snake.js";
+import { score, update as updateSnake, draw as drawSnake, SNAKE_SPEED, getSnakeHead, snakeIntersection} from "./snake.js";
 import { update as updateFood, draw as drawFood } from './food.js';
 import {outsideGrid} from "./grid.js";
 
@@ -30,6 +30,7 @@ export function update() {
     updateSnake();
     updateFood();
     checkDeath();
+    checkScore();
 }
 
 export function draw() {
@@ -41,3 +42,8 @@ export function draw() {
 function checkDeath() {
     gameOver = outsideGrid(getSnakeHead()) || snakeIntersection();
 }
+
+function checkScore() {
+    document.getElementById('score').innerHTML=score.toString();
+}
+
